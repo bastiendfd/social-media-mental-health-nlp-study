@@ -1,0 +1,27 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "synthetic-social-signal-nlp"
+version = "0.1.0"
+description = "Synthetic-only educational NLP research prototype"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "scikit-learn>=1.4,<1.7",
+  "xgboost>=2.0,<3",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<9"]
+
+[project.scripts]
+synthetic-nlp-study = "synthetic_social_signal_nlp.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/synthetic_social_signal_nlp"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

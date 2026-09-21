@@ -1,0 +1,40 @@
+# Virtual environments and local state
+.venv/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+
+# Never commit datasets, external inputs, or exports
+data/
+datasets/
+raw/
+external/
+*.csv
+*.tsv
+*.jsonl
+
+# Never commit trained artifacts, checkpoints, logs, or visualizations
+models/
+artifacts/
+checkpoints/
+logs/
+runs/
+tensorboard/
+*.pkl
+*.joblib
+*.bin
+*.pt
+*.pth
+*.onnx
+*.png
+*.jpg
+*.jpeg
+*.svg
+*.ipynb
+
+# Secrets and editor state
+.env
+*.pem
+*.key
+.vscode/
+.idea/
