@@ -14,7 +14,7 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-dev = ["pytest>=8,<9"]
+dev = ["pytest>=8,<10"]
 
 [project.scripts]
 synthetic-nlp-study = "synthetic_social_signal_nlp.cli:main"
